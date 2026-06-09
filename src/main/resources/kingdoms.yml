@@ -1,0 +1,6 @@
+examples:
+  description: "Ten plik może służyć do notatek administracyjnych lub seedów. Dane produkcyjne są zapisywane w bazie SQL."
+  sample-kingdom:
+    name: "Avalon"
+    level: 3
+    prestige: 420

@@ -1,0 +1,110 @@
+database:
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    database: kingdomcore
+    username: root
+    password: ""
+    use-ssl: false
+
+economy:
+  prefer-vault: true
+  starting-balance: 250.0
+
+kingdom:
+  create-cost: 500.0
+  max-name-length: 18
+  min-name-length: 3
+  name-regex: "^[A-Za-z0-9_]+$"
+  default-member-limit: 12
+  home-teleport-delay-seconds: 5
+  invite-expire-seconds: 120
+  autosave-minutes: 5
+
+upgrades:
+  MEMBER_LIMIT:
+    max-level: 5
+    money-cost: 1000.0
+    prestige-cost: 50
+    member-bonus-per-level: 4
+  EXP_BOOST:
+    max-level: 5
+    money-cost: 1500.0
+    prestige-cost: 80
+  DROP_BOOST:
+    max-level: 4
+    money-cost: 1800.0
+    prestige-cost: 100
+  CHEAPER_REPAIRS:
+    max-level: 3
+    money-cost: 1200.0
+    prestige-cost: 60
+  QUEST_REWARDS:
+    max-level: 5
+    money-cost: 2000.0
+    prestige-cost: 120
+  FASTER_HOME:
+    max-level: 3
+    money-cost: 900.0
+    prestige-cost: 40
+  BANK_SLOTS:
+    max-level: 6
+    money-cost: 1100.0
+    prestige-cost: 55
+
+quests:
+  reset-hour: 4
+  daily:
+    mob_hunter:
+      name: "Łowcy Bestii"
+      description: "Zabijcie 100 mobów jako królestwo."
+      type: KILL_MOBS
+      target: 100
+      money-reward: 750.0
+      prestige-reward: 25
+    miner:
+      name: "Kamienne Serce"
+      description: "Wykopcie 500 bloków stone."
+      type: MINE_STONE
+      target: 500
+      money-reward: 950.0
+      prestige-reward: 30
+    treasury:
+      name: "Skarbiec Rośnie"
+      description: "Wpłaćcie 10000 monet do banku."
+      type: BANK_DEPOSIT
+      target: 10000
+      money-reward: 500.0
+      prestige-reward: 35
+  weekly:
+    champion:
+      name: "Tydzień Dominacji"
+      description: "Wygrajcie 5 walk PvP."
+      type: PVP_KILLS
+      target: 5
+      money-reward: 2500.0
+      prestige-reward: 150
+    boss_slayer:
+      name: "Pogromcy Bossa"
+      description: "Pokonajcie bossa eventowego."
+      type: BOSS_KILLS
+      target: 1
+      money-reward: 5000.0
+      prestige-reward: 250
+
+boss:
+  world: world
+  x: 0.0
+  y: 80.0
+  z: 0.0
+  name: "&5&lPradawny Monarcha"
+  entity-type: WITHER
+  max-health: 600.0
+  reward-money: 2500.0
+  reward-prestige: 100
+  top-damage-entries: 5
+  broadcast-radius: 250
+
+messages:
+  prefix: "&6&lKingdomCore &8» "

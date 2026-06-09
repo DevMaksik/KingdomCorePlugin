@@ -1,0 +1,39 @@
+name: KingdomCore
+version: 1.0.0
+main: pl.kingdomcore.KingdomCorePlugin
+api-version: '1.20'
+author: Portfolio Project
+description: Advanced kingdoms, RPG progression, economy, quests and boss system.
+softdepend:
+  - Vault
+  - PlaceholderAPI
+commands:
+  kingdom:
+    description: Main KingdomCore command.
+    usage: /kingdom
+    aliases: [k, kingdoms]
+    permission: kingdomcore.use
+  kingdomadmin:
+    description: KingdomCore administration command.
+    usage: /kingdomadmin
+    aliases: [ka, kcadmin]
+    permission: kingdomcore.admin
+permissions:
+  kingdomcore.use:
+    description: Allows using player kingdom commands.
+    default: true
+  kingdomcore.create:
+    description: Allows creating kingdoms.
+    default: true
+  kingdomcore.admin:
+    description: Allows using all admin tools.
+    default: op
+  kingdomcore.boss.start:
+    description: Allows starting kingdom boss events.
+    default: op
+  kingdomcore.reload:
+    description: Allows reloading KingdomCore configuration.
+    default: op
+  kingdomcore.economy.admin:
+    description: Allows editing local player economy.
+    default: op
